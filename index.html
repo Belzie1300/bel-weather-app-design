@@ -10,14 +10,45 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="src/style.css" />
-    <title>Document</title>
+    <title>Bel's Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">click me</a>
+      <div class="weather-app">
+        <div class="date">Wednesday 11:45</div>
+        <h1>Osaka</h1>
+        <div class="row">
+          <div class="col-6">
+            <div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Partly Cloudy"
+              />
+              14
+              <span>°C | °F</span>
+            </div>
+            <div>Partly Cloudy</div>
+          </div>
+          <div class="col-6">
+            <div>
+              <ul>
+                <li>Precipitation: 7%</li>
+                <li>Humidity: 77%</li>
+                <li>Wind 27 km/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small
+        ><a
+          href="https://github.com/Belzie1300/bel-weather-app-design"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Belinda Dinh</small
+      >
       <script src="src/app.js"></script>
     </div>
   </body>
