@@ -2,17 +2,17 @@ body {
   font-family: "Monda", sans-serif;
 }
 .weather-app {
-  max-width: 600px;
+  max-width: 700px;
   margin: 115px auto;
-  padding: 30px;
+  padding: 20px;
   border: 2px solid #ffe3a7;
   border-radius: 10px;
 }
-h1 {
-  line-height: 90px;
-}
+
 .main-overview {
-  position: relative;
-  top: 65px;
   list-style: none;
+}
+#main-temp {
+  font-size: 30px;
+  font-weight: 700;
 }
