@@ -26,8 +26,9 @@ body {
 }
 .weather-temperature .main-temp {
   font-size: 70px;
+  line-height: 55px;
 }
 .weather-temperature .unit {
   position: relative;
-  top: -18px;
+  top: -15px;
 }
