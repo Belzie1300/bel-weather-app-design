@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,30 +31,30 @@
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 alt="Partly Cloudy"
               />
-              14
-              <span>°C | °F</span>
+              <span id="main-temp">14</span>
+              <span id="c-unit">°C</span> |
+              <span id="f-unit">°F</span>
             </div>
             <div>Partly Cloudy</div>
           </div>
           <div class="col-6">
             <div>
-              <ul>
-                <li>Precipitation: 7%</li>
+              <ul class="main-overview">
                 <li>Humidity: 77%</li>
                 <li>Wind 27 km/h</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-      <small
-        ><a
-          href="https://github.com/Belzie1300/bel-weather-app-design"
-          target="_blank"
-          >Open-source code</a
+        <small
+          ><a
+            href="https://github.com/Belzie1300/bel-weather-app-design"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Belinda Dinh</small
         >
-        by Belinda Dinh</small
-      >
+      </div>
       <script src="src/app.js"></script>
     </div>
   </body>

@@ -1,0 +1,10 @@
+body {
+  font-family: "Monda", sans-serif;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 115px auto;
+  padding: 30px;
+  border: 2px solid #ffe3a7;
+  border-radius: 10px;
+}
