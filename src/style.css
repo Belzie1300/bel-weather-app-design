@@ -1,18 +1,31 @@
 body {
   font-family: "Monda", sans-serif;
 }
-.weather-app {
+.weather-app-wrapper {
   max-width: 700px;
   margin: 115px auto;
+}
+.weather-app {
   padding: 20px;
   border: 2px solid #ffe3a7;
   border-radius: 10px;
 }
-
+.icon-summary {
+  position: relative;
+  left: 50px;
+  top: -26px;
+}
 .main-overview {
   list-style: none;
+  color: #6d6b6b;
 }
-#main-temp {
-  font-size: 30px;
-  font-weight: 700;
+.weather-temperature {
+  line-height: 45px;
+}
+.weather-temperature .main-temp {
+  font-size: 70px;
+}
+.weather-temperature .unit {
+  position: relative;
+  top: -18px;
 }

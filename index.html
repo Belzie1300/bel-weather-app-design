@@ -21,51 +21,53 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div>Wednesday 11:45</div>
-        <hr />
-        <div class="row">
-          <div class="col-4">
-            <h3>Currently in...</h3>
-          </div>
-          <div class="col-4">
-            <h1>Osaka</h1>
-          </div>
-          <div class="col-4">
-            <div>
-              <ul class="main-overview">
-                <li>Max:<span>27</span>°C</li>
-                <li>Min: <span>20</span>°C</li>
-              </ul>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div>Wednesday 11:45</div>
+          <hr />
+          <h3>Currently in...</h3>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <h1>Osaka</h1>
+            </div>
+            <div class="col-4">
+              <div>
+                <ul class="main-overview">
+                  <li>Max:<span>27</span>°C</li>
+                  <li>Min: <span>20</span>°C</li>
+                </ul>
+              </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-4 icon-summary">
+              <div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Partly Cloudy"
+                  width="100px"
+                />
+              </div>
+              <div>Partly Cloudy</div>
+            </div>
+            <div class="col-4">
+              <div class="d-flex weather-temperature">
+                <span class="main-temp"><strong>27</strong></span>
+                <span class="unit">°C | <a href="#">°F</a></span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div>
+                <ul class="main-overview">
+                  <li>Humidity: <strong>77</strong>%</li>
+                  <li>Wind: <strong>27</strong> km/h</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
         </div>
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Partly Cloudy"
-            />
-            <div>Partly Cloudy</div>
-          </div>
-          <div class="col-4">
-            <div>
-              <span id="main-temp">27</span>
-              <span id="c-unit">°C</span> |
-              <span id="f-unit">°F</span>
-            </div>
-          </div>
-          <div class="col-4">
-            <div>
-              <ul class="main-overview">
-                <li>Humidity: 77%</li>
-                <li>Wind: 27 km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <hr />
         <small
           ><a
             href="https://github.com/Belzie1300/bel-weather-app-design"
@@ -74,8 +76,8 @@
           >
           by Belinda Dinh</small
         >
+        <script src="src/app.js"></script>
       </div>
-      <script src="src/app.js"></script>
     </div>
   </body>
 </html>
