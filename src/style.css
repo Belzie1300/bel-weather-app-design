@@ -13,11 +13,13 @@ body {
 .icon-summary {
   position: relative;
   left: 50px;
-  top: -26px;
+  top: -65px;
 }
 .main-overview {
   list-style: none;
   color: #6d6b6b;
+  position: relative;
+  top: 12px;
 }
 .weather-temperature {
   line-height: 45px;
