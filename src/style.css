@@ -8,3 +8,11 @@ body {
   border: 2px solid #ffe3a7;
   border-radius: 10px;
 }
+h1 {
+  line-height: 90px;
+}
+.main-overview {
+  position: relative;
+  top: 65px;
+  list-style: none;
+}
