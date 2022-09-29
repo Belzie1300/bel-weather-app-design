@@ -35,8 +35,8 @@
             <div class="col-4">
               <div>
                 <ul class="main-overview">
-                  <li>Max:<span>27</span>°C</li>
-                  <li>Min: <span>20</span>°C</li>
+                  <li>Max:<span id="main-overview-max">27</span>°C</li>
+                  <li>Min: <span id="main-overview-min">20</span>°C</li>
                 </ul>
               </div>
             </div>
@@ -50,7 +50,7 @@
                   width="100px"
                 />
               </div>
-              <div>Partly Cloudy</div>
+              <div id="description">Partly Cloudy</div>
             </div>
             <div class="col-4">
               <div class="d-flex weather-temperature">
@@ -61,8 +61,13 @@
             <div class="col-4">
               <div>
                 <ul class="main-overview">
-                  <li>Humidity: <strong>77</strong>%</li>
-                  <li>Wind: <strong>27</strong> km/h</li>
+                  <li>
+                    Humidity: <span id="humidity"><strong>77</strong></span
+                    >%
+                  </li>
+                  <li>
+                    Wind: <span id="wind"><strong>27</strong></span> km/h
+                  </li>
                 </ul>
               </div>
             </div>

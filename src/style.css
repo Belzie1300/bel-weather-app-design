@@ -15,6 +15,9 @@ body {
   left: 50px;
   top: -65px;
 }
+#description::first-letter {
+  text-transform: capitalize;
+}
 .main-overview {
   list-style: none;
   color: #6d6b6b;
