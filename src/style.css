@@ -15,7 +15,7 @@ body {
   left: 50px;
   top: -65px;
 }
-#description::first-letter {
+#description {
   text-transform: capitalize;
 }
 .main-overview {
