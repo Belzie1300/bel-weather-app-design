@@ -1,6 +1,32 @@
 function formatDate(timestamp) {
-  //calculate the data given to give proper date
-  return "Wednesday 29 September 11:45";
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let month = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+  ];
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  month = month[date.getMonth()];
+  let day = date.getDate();
+  days = days[date.getDay()];
+  return `${days} ${day} ${month} ${hours}:${minutes}`;
 }
 
 function displayTemp(response) {
@@ -18,7 +44,7 @@ function displayTemp(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
   minTempElement.innerHTML = Math.round(response.data.main.temp_min);
-  dateElement.innerHtml = formatDate(response.data.dt * 1000);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 let apiKey = "4b3503b2f08a729413c4d33ef1186004";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Osaka&appid=${apiKey}&units=metric`;
