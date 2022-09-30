@@ -40,7 +40,10 @@ function displayTemp(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
   let cityElement = document.querySelector(".city");
-  mainTempElement.innerHTML = Math.round(response.data.main.temp);
+
+  let celsiusTemp = response.data.main.temp;
+
+  mainTempElement.innerHTML = Math.round(celsiusTemp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -64,6 +67,19 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (17 * 9) / 5 + 32;
+  let mainTempElement = document.querySelector(".main-temp");
+  mainTempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
 search("Sydney");
