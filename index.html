@@ -18,13 +18,40 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/af3f9edfd7.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Bel's Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <div id="date"></div>
+          <form id="search-form">
+            <div class="row">
+              <div class="col-3" id="date"></div>
+              <div class="col-5">
+                <input
+                  type="search"
+                  placeholder="Search a city"
+                  class="form-control w-100"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-warning w-100"
+                />
+              </div>
+              <div class="col-2">
+                <button class="btn btn-warning w-100">
+                  <i class="fa-solid fa-location-dot"></i>
+                </button>
+              </div>
+            </div>
+          </form>
           <hr />
           <h3>Currently in...</h3>
           <div class="row">
