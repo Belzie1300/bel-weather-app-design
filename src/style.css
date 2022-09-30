@@ -10,28 +10,40 @@ body {
   border: 2px solid #ffe3a7;
   border-radius: 10px;
 }
+h3 {
+  color: #6d6b6b;
+}
 .icon-summary {
   position: relative;
-  left: 50px;
-  top: -65px;
+  left: -5px;
+  top: -44px;
+  text-align: center;
 }
 #description {
   text-transform: capitalize;
+}
+.city {
+  position: relative;
+  left: 27px;
+  font-size: 45px;
 }
 .main-overview {
   list-style: none;
   color: #6d6b6b;
   position: relative;
-  top: 12px;
+  top: 68px;
 }
 .weather-temperature {
-  line-height: 45px;
+  line-height: 72px;
 }
 .weather-temperature .main-temp {
   font-size: 70px;
   line-height: 55px;
+  position: relative;
+  left: 27px;
 }
 .weather-temperature .unit {
   position: relative;
-  top: -15px;
+  top: -4px;
+  left: 24px;
 }
