@@ -53,3 +53,13 @@ h3 {
   top: -26px;
   left: 18px;
 }
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+#fahrenheit-link {
+  text-decoration: none;
+}
+#celsius-link {
+  text-decoration: none;
+}
