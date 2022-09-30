@@ -42,13 +42,15 @@ function displayTemp(response) {
   let cityElement = document.querySelector(".city");
 
   celsiusTemp = response.data.main.temp;
+  celsiusMaxTemp = response.data.main.temp_max;
+  celsiusMinTemp = response.data.main.temp_min;
 
   mainTempElement.innerHTML = Math.round(celsiusTemp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
-  minTempElement.innerHTML = Math.round(response.data.main.temp_min);
+  maxTempElement.innerHTML = Math.round(celsiusMaxTemp);
+  minTempElement.innerHTML = Math.round(celsiusMinTemp);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   cityElement.innerHTML = response.data.name;
   iconElement.setAttribute(
@@ -72,8 +74,14 @@ function displayFahrenheitTemp(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let fahrenheitMaxTemp = (celsiusMaxTemp * 9) / 5 + 32;
+  let fahrenheitMinTemp = (celsiusMinTemp * 9) / 5 + 32;
   let mainTempElement = document.querySelector(".main-temp");
   mainTempElement.innerHTML = Math.round(fahrenheitTemp);
+  document.querySelector("#main-overview-max").innerHTML =
+    Math.round(fahrenheitMaxTemp);
+  document.querySelector("#main-overview-min").innerHTML =
+    Math.round(fahrenheitMinTemp);
 }
 function displayCelsiusTemp(event) {
   event.preventDefault();
@@ -81,9 +89,15 @@ function displayCelsiusTemp(event) {
   fahrenheitLink.classList.remove("active");
   let mainTempElement = document.querySelector(".main-temp");
   mainTempElement.innerHTML = Math.round(celsiusTemp);
+  document.querySelector("#main-overview-max").innerHTML =
+    Math.round(celsiusMaxTemp);
+  document.querySelector("#main-overview-min").innerHTML =
+    Math.round(celsiusMinTemp);
 }
 
 let celsiusTemp = null;
+let celsiusMaxTemp = null;
+let celsiusMinTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
