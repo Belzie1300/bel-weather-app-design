@@ -39,6 +39,7 @@ function displayTemp(response) {
   let minTempElement = document.querySelector("#main-overview-min");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let cityElement = document.querySelector(".city");
   mainTempElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -46,12 +47,23 @@ function displayTemp(response) {
   maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
   minTempElement.innerHTML = Math.round(response.data.main.temp_min);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  cityElement.innerHTML = response.data.name;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 }
-let apiKey = "4b3503b2f08a729413c4d33ef1186004";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Osaka&appid=${apiKey}&units=metric`;
-axios(apiUrl).then(displayTemp);
+function search(city) {
+  let apiKey = "4b3503b2f08a729413c4d33ef1186004";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayTemp);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+search("Sydney");
