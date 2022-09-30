@@ -31,7 +31,7 @@
           <form id="search-form">
             <div class="row">
               <div class="col-3" id="date"></div>
-              <div class="col-5">
+              <div class="col-4">
                 <input
                   type="search"
                   placeholder="Search a city"
@@ -39,7 +39,7 @@
                   id="city-input"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-3">
                 <input
                   type="submit"
                   value="Search"
@@ -55,19 +55,8 @@
           </form>
           <hr />
           <h3>Currently in...</h3>
-          <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-              <h1 class="city"></h1>
-            </div>
-            <div class="col-4">
-              <div>
-                <ul class="main-overview">
-                  <li>Max: <span id="main-overview-max"></span>°C</li>
-                  <li>Min: <span id="main-overview-min"></span>°C</li>
-                </ul>
-              </div>
-            </div>
+          <div class="city">
+            <h1></h1>
           </div>
           <div class="row">
             <div class="col-4 icon-summary">
@@ -79,11 +68,17 @@
             <div class="col-4">
               <div class="d-flex weather-temperature">
                 <span class="main-temp"><strong></strong></span>
-                <span class="unit">°C | <a href="#">°F</a></span>
+                <span class="unit">°C|<a href="#">°F</a></span>
               </div>
             </div>
             <div class="col-4">
               <div>
+                <div>
+                  <ul class="main-overview">
+                    <li>Max: <span id="main-overview-max"></span>°C</li>
+                    <li>Min: <span id="main-overview-min"></span>°C</li>
+                  </ul>
+                </div>
                 <ul class="main-overview">
                   <li>Humidity: <span id="humidity"></span>%</li>
                   <li>Wind: <span id="wind"></span> km/h</li>

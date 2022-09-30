@@ -10,9 +10,11 @@ body {
   border: 2px solid #ffe3a7;
   border-radius: 10px;
 }
+
 .search-form {
   text-align: center;
 }
+
 h3 {
   color: #6d6b6b;
 }
@@ -27,14 +29,15 @@ h3 {
 }
 .city {
   position: relative;
-  left: 27px;
+  left: 2px;
   font-size: 45px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 .main-overview {
   list-style: none;
   color: #6d6b6b;
-  position: relative;
-  top: 68px;
+  padding: 0;
 }
 .weather-temperature {
   line-height: 72px;
@@ -43,10 +46,10 @@ h3 {
   font-size: 70px;
   line-height: 55px;
   position: relative;
-  left: 27px;
+  left: 18px;
 }
 .weather-temperature .unit {
   position: relative;
-  top: -4px;
-  left: 24px;
+  top: -26px;
+  left: 18px;
 }
