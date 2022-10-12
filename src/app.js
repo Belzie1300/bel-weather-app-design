@@ -34,7 +34,7 @@ function formatDate(timestamp) {
   month = month[date.getMonth()];
   let day = date.getDate();
   days = days[date.getDay()];
-  return `${days} ${day} ${month} ${hours}:${minutes}`;
+  return `${days} ${day} ${month} <div>Last updated:${hours}:${minutes}</div>`;
 }
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
