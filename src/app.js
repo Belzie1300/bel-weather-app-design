@@ -36,9 +36,33 @@ function formatDate(timestamp) {
   days = days[date.getDay()];
   return `${days} ${day} ${month} ${hours}:${minutes}`;
 }
+function displayforecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+  <div class="forecast-date">${day}</div>
+  <img
+  src="http://openweathermap.org/img/wn/04d@2x.png"
+  alt="Cloudy"
+  />
+  <div class="forecast-temp">
+  <span class="forecast-max"> 18°</span>
+  <span class="forecast-min"> 12°</span>
+  </div>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayTemp(response) {
-  console.log(response.data);
   let mainTempElement = document.querySelector(".main-temp");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
@@ -67,6 +91,7 @@ function displayTemp(response) {
   );
   iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 }
+displayforecast();
 function search(city) {
   let apiKey = "4b3503b2f08a729413c4d33ef1186004";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
